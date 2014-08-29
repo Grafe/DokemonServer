@@ -40,4 +40,14 @@ public class Player {
 	public int getServerId() {
 		return this.serverId;
 	}
+	
+	public static Player get(Connection connection) {
+		for(Player player : players){
+			if(player.getConnection() == connection){
+				return player;
+			}
+		}
+
+		return null;
+	}
 }

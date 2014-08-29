@@ -2,6 +2,7 @@ package com.dokemon.dokemonserver.net;
 
 import java.io.IOException;
 
+import com.dokemon.dokemonserver.net.packages.ChatPackage;
 import com.dokemon.dokemonserver.net.packages.PlayerLoginPackage;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.EndPoint;
@@ -38,6 +39,7 @@ public class NetServer {
 
 		//Initialize kryo classes
 		kryo.register(PlayerLoginPackage.class);
+		kryo.register(ChatPackage.class);
 
 		//TODO: Automatisieren
 	}
